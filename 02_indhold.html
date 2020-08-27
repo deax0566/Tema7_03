@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+    <header>
+        <h1>Titel</h1>
+    </header>
+
+    <main>
+        <h2>Undertitel</h2>
+        <section>
+            <article>
+                <img src="mig_1.jpg">
+                <h3>Article 1</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo sapiente distinctio enim, veniam, voluptatibus eum tempora. Laudantium debitis, fuga magnam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis quasi molestiae assumenda, adipisci voluptatibus dolore mollitia sint voluptatem dolores porro?</p>
+            </article>
+            <article>
+                <img src="mig_2.jpg">
+                <h3>Article 2</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo sapiente distinctio enim, veniam, voluptatibus eum tempora. Laudantium debitis, fuga magnam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis quasi molestiae assumenda, adipisci voluptatibus dolore mollitia sint voluptatem dolores porro?</p>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>This is a footer</p>
+    </footer>
+
+    <script>
+        //I denne opg. skal titlen udskriftes:
+        const overskrift = document.querySelector("h1");
+        overskrift.textContent = "Ny Overskrift";
+
+        //opg: Udskift tekst og overskrifter i de to article elementer v.h.af. javaScript
+        //Udskifter underoverskrift (Article 1)
+        const artikel1 = document.querySelector("article:nth-child(1) h3");
+        artikel1.textContent = "Ny underoverskrift på første artikel";
+
+        //Udskifter p (Article 1)
+        const tekst1 = document.querySelector("article:nth-child(1) p");
+        tekst1.textContent = "Helt ny tekst på p1";
+
+        //Udskifter underoverskrift (Article 2)
+        const artikel2 = document.querySelector("article:nth-child(2) h3");
+        artikel2.textContent = "Ny underoverskrift på anden artikel";
+
+        //Udskifter p (Article 2)
+        const tekst2 = document.querySelector("article:nth-child(2) p");
+        tekst2.textContent = "Helt ny tekst på p2";
+
+    </script>
+
+</body>
+
+</html>

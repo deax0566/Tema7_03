@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+    <header>
+        <h1>Titel</h1>
+    </header>
+
+    <main>
+        <h2>Undertitel</h2>
+        <section>
+            <article>
+                <img src="mig_1.jpg">
+                <h3>Article 1</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo sapiente distinctio enim, veniam, voluptatibus eum tempora. Laudantium debitis, fuga magnam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis quasi molestiae assumenda, adipisci voluptatibus dolore mollitia sint voluptatem dolores porro?</p>
+            </article>
+            <article>
+                <img src="mig_2.jpg">
+                <h3>Article 2</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo sapiente distinctio enim, veniam, voluptatibus eum tempora. Laudantium debitis, fuga magnam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis quasi molestiae assumenda, adipisci voluptatibus dolore mollitia sint voluptatem dolores porro?</p>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>This is a footer</p>
+    </footer>
+
+    <script>
+        //Når man bruger 'const' så vælger man et eller andet som kan ændres/overskrides. Har man f.eks. i html lavet h1 til <h1>Titel</h1> kan man med js lave det om til "Billeder", istedet for "Titel" istedet. (Se et eksempel på hvor jeg KUN laver overskriften om nede i bunden) Og ignorer de der consol.log, for det var bare en del af videoen hvor man tester det med at man kan se noget forskelligt i konsollen (Mega ligegyldigt).
+        const overskrift = document.querySelector("h1");
+
+        const artikel1 = document.querySelector("article:nth-child(1) p");
+
+        overskrift.textContent;
+
+        // Denne udskriver "Titel" i consollen.
+        console.log(overskrift.textContent);
+
+        //Denne laver overskriften om til 'Billeder'.
+        overskrift.textContent = "Billeder";
+
+        //Denne udskriver "Billeder" i consollen.
+        console.log(overskrift.textContent);
+
+        //Denne laver teksten om i p i den første article (pga. at vi længere oppe har lavet article:nth-child p til en konstant variabel, som nu på denne måde kan ændres.)
+        artikel1.textContent = "Ej se nu der";
+
+
+
+        //   EKSEMPEL:
+        //Her laver jeg Overskriften (h1) om fra 'Titel' til 'Billeder'
+        //Laver det først til en konstant variabel, altså vælger at det er h1 der skal ændres:
+
+        //KODEN: const overskrift = document.querySelector("h1");
+
+        //Her efter skriver jeg hvad teksten skal ændres til:
+
+        //KODEN: overskrift.textContent = "Billeder";
+
+    </script>
+
+</body>
+
+</html>
