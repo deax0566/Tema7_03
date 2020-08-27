@@ -38,64 +38,48 @@
 
         //OPGAVE BESKRIVELSE: Opret et nyt article-element (createElement).
 
-        //Vi vælger section, så vi efter at have lavet henholdsvis article, billeder, overskrift osv, kan sætte det ind i den section vi har lavet i html'en.
+        //Tag fat i section, så den senere kan tilknyttes den ny article.
         let mainSection = document.querySelector("section");
 
-        //Adder et article element. (createElement bruges til at adde et element der ikke er i html'en).
+        //Adder et article element.
         let nyArtikel = document.createElement("article");
 
-        //Fortæller js at den article vi lige har lavet, skal indsættes i vores section.
+        //Tilføjer article til vsection
         mainSection.appendChild(nyArtikel);
-        //appendChild bruges hvis man vill adde et nyt child element (I dette eksempel 'nyArtikel'), uden at man skriver den ind i html.
 
 
 
         //OPGAVE BESKRIVELSE: Tilføj et billede
         //laver et billede
-        let billedeArtikel3 = document.createElement("img");
-
-        //Finder billedet frem
-
-
-        //Tilknytter billedet til den img vi har lavet
-
-
-        //Tilføjer billedet til artiklen.
-        nyArtikel.appendChild(billedeArtikel3)
-
+        let nytBillede = document.createElement("img");
+        //Fortæller hvilket billede der skal bruges
+        nytBillede.src = "mig_1.jpg";
+        nytBillede.alt = "billede af mig";
+        //Sætter det ind i artiklen
+        nyArtikel.appendChild(nytBillede);
 
 
         //OPGAVE BESKRIVELSE: tilføj en overskrift
-
-        //laver en overskrift (h3)
+        //laver en oversk€rift (h3)
         let underoverskrift = document.createElement("h3");
-
         //laver teksten til overskriften (createTextNode bruges når det ikke er et element, men er ren tekst.
         let underoverskriftTxt = document.createTextNode("Article 3");
-
         //Sammensætter overskrift elementet med den rene tekst
         underoverskrift.appendChild(underoverskriftTxt);
-
         //Tilføjer underoverskriften til den article vi lavede.
         nyArtikel.appendChild(underoverskrift)
 
 
-
-
-
         //OPGAVE BESKRIVELSE: Tilføj en tekst (p)
-
         //laver en tekst (p)
         let tekst3 = document.createElement("p");
-
         //laver teksten til p
         let tekst3txt = document.createTextNode("En ny tekst til artikel 3");
-
         //Sammensætter overskrift elementet med den rene tekst
         tekst3.appendChild(tekst3txt);
-
         //Tilføjer underoverskriften til den article vi lavede.
         nyArtikel.appendChild(tekst3)
+
 
 
 
@@ -112,6 +96,10 @@
         //Opg. beskrivelse: Udskift eller tilføj tekst i alt attributten på billederne.
         pic1.alt = "Mit barndoms hjem <3"
         pic1.alt = "Køkkenet i mit barndoms hjem (dog nu nyrenoveret)."
+
+
+
+
 
         //OPG. 02_SELECT:
         //I denne opg. skal titlen udskriftes:
