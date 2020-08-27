@@ -1,0 +1,134 @@
+<!--  Forstår ikke helt havd jeg skal, så gider faktisk ikke :D
+-->
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+    <header>
+        <h1>Titel</h1>
+    </header>
+
+    <main>
+        <h2>Undertitel</h2>
+        <section>
+            <article>
+                <img src="mig_1.jpg">
+                <h3>Article 1</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo sapiente distinctio enim, veniam, voluptatibus eum tempora. Laudantium debitis, fuga magnam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis quasi molestiae assumenda, adipisci voluptatibus dolore mollitia sint voluptatem dolores porro?</p>
+            </article>
+            <article>
+                <img src="mig_2.jpg">
+                <h3>Article 2</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo sapiente distinctio enim, veniam, voluptatibus eum tempora. Laudantium debitis, fuga magnam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis quasi molestiae assumenda, adipisci voluptatibus dolore mollitia sint voluptatem dolores porro?</p>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>This is a footer</p>
+    </footer>
+
+    <script>
+        //OPG. 04_APPEND:
+
+        //OPGAVE BESKRIVELSE: Opret et nyt article-element (createElement).
+
+        //Tag fat i section, så den senere kan tilknyttes den ny article.
+        let mainSection = document.querySelector("section");
+
+        //Adder et article element.
+        let nyArtikel = document.createElement("article");
+
+        //Tilføjer article til vsection
+        mainSection.appendChild(nyArtikel);
+
+
+
+        //OPGAVE BESKRIVELSE: Tilføj et billede
+        //laver et billede
+        let nytBillede = document.createElement("img");
+        //Fortæller hvilket billede der skal bruges
+        nytBillede.src = "mig_1.jpg";
+        nytBillede.alt = "billede af mig";
+        //Sætter det ind i artiklen
+        nyArtikel.appendChild(nytBillede);
+
+
+        //OPGAVE BESKRIVELSE: tilføj en overskrift
+        //laver en oversk€rift (h3)
+        let underoverskrift = document.createElement("h3");
+        //laver teksten til overskriften (createTextNode bruges når det ikke er et element, men er ren tekst.
+        let underoverskriftTxt = document.createTextNode("Article 3");
+        //Sammensætter overskrift elementet med den rene tekst
+        underoverskrift.appendChild(underoverskriftTxt);
+        //Tilføjer underoverskriften til den article vi lavede.
+        nyArtikel.appendChild(underoverskrift)
+
+
+        //OPGAVE BESKRIVELSE: Tilføj en tekst (p)
+        //laver en tekst (p)
+        let tekst3 = document.createElement("p");
+        //laver teksten til p
+        let tekst3txt = document.createTextNode("En ny tekst til artikel 3");
+        //Sammensætter overskrift elementet med den rene tekst
+        tekst3.appendChild(tekst3txt);
+        //Tilføjer underoverskriften til den article vi lavede.
+        nyArtikel.appendChild(tekst3)
+
+
+
+
+
+
+
+
+        //OPG 03_INDHOLD:
+        //Opg. beskrivelse: Udskift billederne i de to article tags
+        const pic1 = document.querySelector("article:nth-child(1) img");
+        pic1.src = "hjem1.png"
+        const pic2 = document.querySelector("article:nth-child(2) img");
+        pic2.src = "hjem2.png"
+        //Opg. beskrivelse: Udskift eller tilføj tekst i alt attributten på billederne.
+        pic1.alt = "Mit barndoms hjem <3"
+        pic1.alt = "Køkkenet i mit barndoms hjem (dog nu nyrenoveret)."
+
+
+
+
+
+        //OPG. 02_SELECT:
+        //I denne opg. skal titlen udskriftes:
+        const overskrift = document.querySelector("h1");
+        overskrift.textContent = "Ny Overskrift";
+        //opg: Udskift tekst og overskrifter i de to article elementer v.h.af. javaScript
+        //Udskifter underoverskrift (Article 1)
+        const artikel1 = document.querySelector("article:nth-child(1) h3");
+        artikel1.textContent = "Ny underoverskrift på første artikel";
+        //Udskifter p (Article 1)
+        const tekst1 = document.querySelector("article:nth-child(1) p");
+        tekst1.textContent = "Helt ny tekst på p1";
+        //Udskifter underoverskrift (Article 2)
+        const artikel2 = document.querySelector("article:nth-child(2) h3");
+        artikel2.textContent = "Ny underoverskrift på anden artikel";
+        //Udskifter p (Article 2)
+        const tekst2 = document.querySelector("article:nth-child(2) p");
+        tekst2.textContent = "Helt ny tekst på p2";
+
+    </script>
+
+</body>
+
+</html>

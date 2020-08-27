@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1>Disneyland 2019</h1>
+    <img src="billeder/img1.jpg" alt="billede">
+    <button>Næste billede</button>
+    <p>Billederne er fra min sidste Disney tur</p>
+
+
+    <script>
+        //Lav en tæller
+        let number = 0;
+
+        //Find billede
+        const billede = document.querySelector("img");
+
+        //opret array
+        let billeder = ["img1.jpg", "img2.jpg", "img3.jpg", "img4.jpg", "img5.jpg", "img6.jpg", "img7.jpg", "img8.jpg", "img9.jpg", "img10.jpg", "img11.jpg", "img12.jpg", "img13.jpg", "img14.jpg", "img15.jpg", "img16.jpg", "img17.jpg", "img18.jpg", "img19.jpg", "img20.jpg", "img21.jpg"]
+
+
+
+        //klik på knap for at skifte billede
+        const knap = document.querySelector("button");
+        knap.addEventListener("click", skiftBillede);
+
+        function skiftBillede() {
+            if (number < 20) {
+                console.log(skiftBillede);
+                number++;
+                console.log(billeder[number]);
+                billede.src = "billeder/" + billeder[number];
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>
